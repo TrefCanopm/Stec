@@ -71,7 +71,7 @@ int main()
 		}
 		default:
 		{
-			cout << "Введите номер действия из списка\n\n\n\n";
+			cout << "Enter the action number from the list\n\n\n\n";
 		}
 		}
 	}
@@ -79,13 +79,13 @@ int main()
 
 void Menu()
 {
-	cout << "\t Меню" << endl;
-	cout << "1) Ввод одного элемента в стек" << endl;
-	cout << "2) Ввод нескольких элементов в стек" << endl;
-	cout << "3) Удоление нескольких элементов с заданого" << endl;
-	cout << "4) Удоление стек" << endl;
-	cout << "5) Ввывод стека" << endl;
-	cout << "6) Завершение работы со стеком" << endl;
+	cout << "\t Menu" << endl;
+	cout << "1) Putting one element on the stack" << endl;
+	cout << "2) Putting multiple items on the stack" << endl;
+	cout << "3) Removing multiple elements from a given" << endl;
+	cout << "4) Removing stack" << endl;
+	cout << "5) Stack output" << endl;
+	cout << "6) Shutting down the stack" << endl;
 } 
 
 bool Chek(List* list)
@@ -145,9 +145,9 @@ void DelK(List* list)
 {
 	int n, i;
 	int k = 1;
-	cout << "Введите с какого элемента начнётся удоление в списке" << endl;
+	cout << "Enter which item to start deleting from in the list" << endl;
 	cin >> n;
-	cout << "Введите сколько элементов нужно удолить" << endl;
+	cout << "Enter how many items you need to delete" << endl;
 	cin >> i;
 	if (Chek(list))
 	{
@@ -181,16 +181,16 @@ void DelK(List* list)
 				list->head->prev = temp;
 				list->head = temp;
 			}
-			cout << "Элементы удолены" << endl;
+			cout << "Elements removed" << endl;
 		}
 		else
 		{
-			cout << "Введите номер элемента каторый есть в стеке" << endl;
+			cout << "Enter the number of the element that is in the stack" << endl;
 		}
 	}
 	else
 	{
-		cout << "Стек пуст" << endl;
+		cout << "Stack is empty" << endl;
 	}
 }
 
@@ -205,11 +205,11 @@ void DelList(List* list)
 			temp = temp->next;
 			delete temp1;
 		}
-		cout << "Стек удолён" << endl;
+		cout << "Stack removed" << endl;
 	}
 	else
 	{
-		cout << "Стек пуст" << endl;
+		cout << "Stack is empty" << endl;
 	}
 }
 void CoutList(List* list)
@@ -227,6 +227,6 @@ void CoutList(List* list)
 	}
 	else
 	{
-		cout << "Стек пуст" << endl;
+		cout << "Stack is empty" << endl;
 	}
 }
